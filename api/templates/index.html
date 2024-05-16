@@ -1,0 +1,51 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DNS Record Checker</title>
+    <link rel="stylesheet" href='{% static "index.css" %}'>
+    <script src='{% static "index.js" %}' defer></script>
+</head>
+<body>
+    <main>
+        <div id="hero">
+            <h1>DNS Lookup Tool</h1>
+            <p>Find DNS records of a Domain or Sub-Domain</p>
+        </div>
+        <div id="app">
+            <div id="enter_domain">
+                <div id="db">
+                    <!-- <header>Enter Domain Name</header> -->
+                    <input type="text" id="domain" placeholder="Enter Domain">
+                    <button onclick="search_records()">Lookup</button>
+                </div>
+            </div>
+
+            <div id="record_type">
+                <header>Record Type:</header>
+                <div id="record_types">
+                    <div class="record_item active" id="all">ALL</div>
+                    <div class="record_item">A</div>
+                    <div class="record_item">AAAA</div>
+                    <div class="record_item">CNAME</div>
+                    <div class="record_item">TXT</div>
+                    <div class="record_item">MX</div>
+                    <div class="record_item">NS</div>
+                    <div class="record_item">SRV</div>
+                    <div class="record_item">CAA</div>
+                    <div class="record_item">DNSKEY</div>
+                    <div class="record_item">SOA</div>
+                    <div class="record_item">PTR</div>
+                    <div class="record_item">DS</div>
+                </div>
+            </div>
+
+            <div id="results">
+
+            </div>
+        </div>        
+    </main>
+</body>
+</html>
